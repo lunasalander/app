@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Publications App</title>
+
+	<!-- CSS -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<style type="text/css">
+
+	body{
+		background-image: url('assets/images/background.jpg');
+		background-size: cover;
+		display: none;
+	}
+		
+	.card{
+		width:  55%;
+		margin-top: 50px;
+	}
+
+	textarea{
+		resize: none;
+	}
+
+	</style>
+
+</head>
+<body id="fade">
+	<div class="card mx-auto">
+
+		<div class="card-header bg-primary text-light">
+	    Publish a story:
+	  	</div>
+
+	  	<div class="card-body mb-3">
+	    	<form>
+
+	    		<div>
+	    			<label>Username: </label>
+	    			<br>
+	    			<input class="form-control" type="text" id="username">
+	    		</div>
+	    		<div class="mb-3">
+	    			<label>Image description: </label>
+	    			<br>
+	    			<textarea class="form-control" id="description" rows=4></textarea>
+	    		</div>
+	    		<div class = "mb-3">
+	    			<label>Upload photo: </label>
+	    			<input type="file" class="form-control" id="file" accept=".jpg, .png, .gif">
+	    		</div>
+	    		<div class="mb-3 text-center" id="preview">
+	    			
+	    		</div>
+	    		<div class="mb-3">
+	    			<button class="form-control btn btn-outline-primary" type="button" id="post">Post Image</button>
+	    		</div>
+	    		<div class="mb-3">
+	    			<button class="form-control btn btn-outline-primary" type="button" id="view-stories" onclick="location.href='publications.html'">View Stories</button>
+	    		</div>
+	    	</form>
+	 	</div>
+	</div>
+
+	<script type="text/javascript" src="index.js"></script>
+
+	<script>
+		$(document).ready(function(){
+		    $("#fade").fadeIn(900);
+		});
+	</script>
+	
+</body>
+</html>
